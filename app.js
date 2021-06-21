@@ -7,7 +7,7 @@ const storageConnection = mysql.createConnection({
   user: "admin",
   password: "admin1234",
   port: 3306,
-  database: "salon",
+  database: "apply",
   timezone: "+09:00",
   dateStrings: "date",
 });
