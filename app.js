@@ -3,9 +3,9 @@ import mysql from "mysql";
 import "./models/index.js";
 
 const storageConnection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "0727",
+  host: "ec2-3-143-253-164.us-east-2.compute.amazonaws.com",
+  user: "admin",
+  password: "admin1234",
   port: 3306,
   database: "salon",
   timezone: "+09:00",
