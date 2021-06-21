@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const apply = require("./apply").default;
+const apply = require("./apply.js").default;
 
 router.get("/", apply.list);
 router.post("/add", apply.add);

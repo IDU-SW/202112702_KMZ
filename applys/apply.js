@@ -1,4 +1,4 @@
-import { Apply } from "../models";
+import { Apply } from "../models/Apply.js";
 
 export default {
   add: async (req, res) => {
