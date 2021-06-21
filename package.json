@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "202112702_kmz",
   "version": "1.0.0",
   "description": "15 project",
@@ -31,6 +32,5 @@
     "@babel/preset-env": "^7.14.5",
     "babel-core": "^6.26.3",
     "babel-node": "0.0.1-security"
-  },
-  "type": "module"
+  }
 }
