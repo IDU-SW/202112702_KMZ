@@ -1,0 +1,35 @@
+{
+  "name": "202112702_kmz",
+  "version": "1.0.0",
+  "description": "15 project",
+  "main": "index.js",
+  "scripts": {
+    "salon": "nodemon --exec babel-node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IDU-SW/202112702_KMZ.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IDU-SW/202112702_KMZ/issues"
+  },
+  "homepage": "https://github.com/IDU-SW/202112702_KMZ#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.7",
+    "sequelize": "^6.6.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.6",
+    "@babel/node": "^7.14.5",
+    "@babel/preset-env": "^7.14.5",
+    "babel-core": "^6.26.3",
+    "babel-node": "0.0.1-security"
+  }
+}
