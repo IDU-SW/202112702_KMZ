@@ -1,5 +1,4 @@
 import Sequelize from "sequelize";
-import Apply from "./Apply.js";
 
 const db = {};
 const apply = new Sequelize("salon", "admin", "admin1234", {
@@ -9,7 +8,7 @@ const apply = new Sequelize("salon", "admin", "admin1234", {
   timezone: "+09:00",
 });
 
-db.Apply = Apply(apply, Sequelize);
+db.Apply = require("./Apply.js")(apply, Sequelize);
 
 db.sequelize = apply;
 db.Sequelize = Sequelize;
