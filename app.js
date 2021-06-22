@@ -3,7 +3,7 @@ const mysql = require("mysql");
 require("./models/index.js");
 
 const storageConnection = mysql.createConnection({
-  host: "ec2-3-143-253-164.us-east-2.compute.amazonaws.com",
+  host: "database-1.cedcgarzagog.us-east-2.rds.amazonaws.com",
   user: "admin",
   password: "admin1234",
   port: 3306,
