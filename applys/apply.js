@@ -22,7 +22,7 @@ module.exports = {
       const list = await Apply.findAll({});
       res.json(list);
     } catch (err) {
-      console.log(err);
+      res.json(err);
       //res.status(404).send("---not found---");
     }
   },
