@@ -12,7 +12,7 @@ module.exports = {
       });
       res.json("Apply added success!!!");
     } catch (err) {
-      console.log(err);
+      res.json(err);
       res.status(404).send("---not found---");
     }
   },
@@ -23,7 +23,7 @@ module.exports = {
       res.json(list);
     } catch (err) {
       res.json(err);
-      //res.status(404).send("---not found---");
+      res.status(404).send("---not found---");
     }
   },
 
@@ -49,7 +49,7 @@ module.exports = {
         res.status(200).json("Apply update success!!!");
       });
     } catch (err) {
-      console.log(err);
+      res.json(err);
       res.status(404).send("---not found---");
     }
   },
@@ -62,7 +62,7 @@ module.exports = {
         res.status(200).json("Apply delete success!!!");
       });
     } catch (err) {
-      console.log(err);
+      res.json(err);
       res.status(404).send("---not found---");
     }
   },
