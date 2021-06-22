@@ -1,6 +1,6 @@
 ## URL
 
-http://ec2-3-143-253-164.us-east-2.compute.amazonaws.com:3000/apply
+http://ec2-3-143-253-164.us-east-2.compute.amazonaws.com:3000
 
 ### salonapply
 
