@@ -21,7 +21,7 @@ module.exports = {
       const list = await Apply.findAll({});
       res.json(list);
     } catch (err) {
-      console.log(err);
+      return err;
     }
   },
 
