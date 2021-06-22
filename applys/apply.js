@@ -13,6 +13,7 @@ module.exports = {
       res.json("Apply added success!!!");
     } catch (err) {
       res.json(err);
+      console.log(err);
       //res.status(404).send("---not found---");
     }
   },
@@ -23,6 +24,7 @@ module.exports = {
       res.json(list);
     } catch (err) {
       res.json(err);
+      console.log(err);
       //res.status(404).send("---not found---");
     }
   },
