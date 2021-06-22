@@ -1,7 +1,7 @@
 const Sequelize = require("sequelize");
 
 const db = {};
-const apply = new Sequelize("apply", "admin", "admin1234", {
+const apply = new Sequelize("nodejssalon", "admin", "admin1234", {
   host: "database-1.cedcgarzagog.us-east-2.rds.amazonaws.com",
   dialect: "mysql",
   dialectOptions: { charset: "utf8mb4", dateStrings: true, typeCast: true },
