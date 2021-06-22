@@ -1,6 +1,6 @@
 const Apply = require("../models/Apply.js");
 
-export default {
+module.exports = {
   add: async (req, res) => {
     try {
       const { product, price, manager, area } = req.body;
