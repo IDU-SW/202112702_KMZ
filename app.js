@@ -1,6 +1,6 @@
-import express from "express";
-import mysql from "mysql";
-import "./models/index.mjs";
+const express = require("express");
+const mysql = require("mysql");
+require("./models/index.js");
 
 const storageConnection = mysql.createConnection({
   host: "ec2-3-143-253-164.us-east-2.compute.amazonaws.com",

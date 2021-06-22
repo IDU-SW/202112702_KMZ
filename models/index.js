@@ -1,4 +1,4 @@
-import Sequelize from "sequelize";
+const Sequelize = require("sequelize");
 
 const db = {};
 const apply = new Sequelize("apply", "admin", "admin1234", {
