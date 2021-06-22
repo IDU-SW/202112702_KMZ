@@ -22,7 +22,7 @@ module.exports = {
       res.json(list);
     } catch (err) {
       console.log(err);
-      res.status(404).send("---not found---");
+      res.status(404);
     }
   },
 
