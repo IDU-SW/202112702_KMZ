@@ -1,21 +1,20 @@
 const Apply = require("../models/Apply.js");
 
-export default {
-  add: async (req, res) => {
-    try {
-      const { product, price, manager, area } = req.body;
-      await Apply.create({
-        product: product,
-        price: price,
-        manager: manager,
-        area: area,
-      });
-      res.json("Apply added success!!!");
-    } catch {
-      res.status(404).send("---not found---");
-    }
-  },
-  list: async (req, res) => {
+(exports.add = async (req, res) => {
+  try {
+    const { product, price, manager, area } = req.body;
+    await Apply.create({
+      product: product,
+      price: price,
+      manager: manager,
+      area: area,
+    });
+    res.json("Apply added success!!!");
+  } catch {
+    res.status(404).send("---not found---");
+  }
+}),
+  (exports.list = async (req, res) => {
     try {
       const list = await Apply.findAll({});
       res.json(list);
@@ -23,8 +22,8 @@ export default {
       console.log(err);
       res.status(404).send("---not found---");
     }
-  },
-  complete: async (req, res) => {
+  }),
+  (exports.complete = async (req, res) => {
     const { id, product, price, manager, area } = req.body;
 
     try {
@@ -48,8 +47,8 @@ export default {
     } catch {
       res.status(404).send("---not found---");
     }
-  },
-  suclist: async (req, res) => {
+  }),
+  (exports.suclist = async (req, res) => {
     try {
       const suclist = await Apply.findAll({ where: { status: true } });
       res.json(suclist);
@@ -57,8 +56,8 @@ export default {
       console.log(err);
       res.status(404).send("---not found---");
     }
-  },
-  delete: async (req, res) => {
+  }),
+  (exports.delete = async (req, res) => {
     const { id } = req.body;
 
     try {
@@ -68,5 +67,4 @@ export default {
     } catch {
       res.status(404).send("---not found---");
     }
-  },
-};
+  });
