@@ -1,7 +1,9 @@
 const router = require("express").Router();
 
-const aplly = require("./applys");
+const todo = require("./todos");
+const todoGroup = require("./todoGroups");
 
-router.use("/apply", aplly);
+router.use("/todo", todo);
+router.use("/todogroup", todoGroup);
 
 module.exports = router;

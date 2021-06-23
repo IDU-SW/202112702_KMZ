@@ -4,7 +4,7 @@
   "description": "15 project",
   "main": "index.js",
   "scripts": {
-    "salon": "nodemon --exec babel-node app.js",
+    "todo": "nodemon --exec babel-node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -1,26 +1,22 @@
 module.exports = (sequelize, DataTypes) => {
-  const Apply = sequelize.define(
-    "Apply",
+  const Todo = sequelize.define(
+    "Todo",
     {
       id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true,
       },
-      product: {
+      title: {
         type: DataTypes.STRING(30),
         allowNull: true, //null 허용
       },
-      price: {
-        type: DataTypes.STRING(30),
+      subtitle: {
+        type: DataTypes.STRING(60),
         allowNull: true,
       },
-      manager: {
-        type: DataTypes.STRING(20),
-        allowNull: true,
-      },
-      area: {
-        type: DataTypes.STRING(20),
+      status: {
+        type: DataTypes.BOOLEAN,
         allowNull: true,
       },
       date: {
@@ -28,10 +24,18 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         defaultValue: sequelize.literal("now()"),
       },
+      group_id: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        // Reference: {
+        //   model: TodoGroup,
+        //   key: "id",
+        // },
+      },
     },
     {
       timestamps: false,
     }
   );
-  return Apply;
+  return Todo;
 };
