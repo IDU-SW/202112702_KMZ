@@ -1,17 +1,17 @@
-import Sequelize from "sequelize";
+const Sequelize = require("sequelize");
+
 const db = {};
-const todo = new Sequelize("nodejstodo", "admin", "cometrue", {
-  host: "database-1.c2mjemzrowef.ap-northeast-2.rds.amazonaws.com",
-  dialect: "mysql", //사용할 데이터베이스 종류
+const apply = new Sequelize("nodejssalon", "admin", "admin1234", {
+  host: "database-1.cedcgarzagog.us-east-2.rds.amazonaws.com",
+  dialect: "mysql",
   dialectOptions: { charset: "utf8mb4", dateStrings: true, typeCast: true },
   timezone: "+09:00",
 });
 
-db.Todo = require("./Todo")(todo, Sequelize);
-db.TodoGroup = require("./TodoGroup")(todo, Sequelize);
+db.Apply = require("./Apply.js")(apply, Sequelize);
 
-db.sequelize = todo;
+db.sequelize = apply;
 db.Sequelize = Sequelize;
-todo.sync();
+apply.sync();
 
 module.exports = db;
